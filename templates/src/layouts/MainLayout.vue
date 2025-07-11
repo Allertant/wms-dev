@@ -11,16 +11,18 @@
               content-class="bg-amber text-black shadow-4"
               :offset="[15, 15]"
               content-style="font-size: 12px"
-              >{{ $t("index.hide_menu") }}</q-tooltip
+            >{{ $t('index.hide_menu') }}
+            </q-tooltip
             >
           </q-btn>
         </transition>
         <transition appear enter-active-class="animated zoomIn">
           <q-toolbar-title shrink class="text-weight-bold" @click="$router.push({ name: 'web_index' })">{{
-            $t("index.title")
-          }}</q-toolbar-title>
+              $t('index.title')
+            }}
+          </q-toolbar-title>
         </transition>
-        <q-space />
+        <q-space/>
         <transition appear enter-active-class="animated zoomIn">
           <q-btn
             square
@@ -59,7 +61,8 @@
               content-class="bg-amber text-black shadow-4"
               :offset="[15, 15]"
               content-style="font-size: 12px"
-              >{{ $t("index.translate") }}</q-tooltip
+            >{{ $t('index.translate') }}
+            </q-tooltip
             >
             <q-menu>
               <q-list style="min-width: 100px">
@@ -76,7 +79,7 @@
             </q-menu>
           </q-btn>
         </transition>
-        <q-separator vertical />
+        <q-separator vertical/>
         <template v-if="authin === '1'">
           <transition appear enter-active-class="animated zoomIn">
             <q-btn-dropdown
@@ -88,7 +91,7 @@
               <div class="row no-wrap q-pa-md">
                 <div class="column" style="width: 150px">
                   <div class="text-h6 q-mb-md">
-                    {{ $t("index.user_center") }}
+                    {{ $t('index.user_center') }}
                   </div>
                   <q-btn
                     flat
@@ -102,7 +105,8 @@
                       content-class="bg-amber text-black shadow-4"
                       :offset="[10, 10]"
                       content-style="font-size: 12px"
-                      >{{ $t("index.change_user") }}</q-tooltip
+                    >{{ $t('index.change_user') }}
+                    </q-tooltip
                     >
                   </q-btn>
                   <q-btn
@@ -117,15 +121,18 @@
                       content-class="bg-amber text-black shadow-4"
                       :offset="[10, 10]"
                       content-style="font-size: 12px"
-                      >{{ $t("index.view_my_openid") }}</q-tooltip
+                    >{{ $t('index.view_my_openid') }}
+                    </q-tooltip
                     >
                   </q-btn>
                 </div>
-                <q-separator vertical inset class="q-mx-lg" />
+                <q-separator vertical inset class="q-mx-lg"/>
                 <div class="column items-center">
                   <q-avatar size="72px"
-                    ><q-img src="statics/staff/stafftype.png"></q-img
-                  ></q-avatar>
+                  >
+                    <q-img src="statics/staff/stafftype.png"></q-img
+                    >
+                  </q-avatar>
                   <div class="text-subtitle1 q-mt-md q-mb-xs">
                     {{ login_name }}
                   </div>
@@ -142,7 +149,8 @@
                       content-class="bg-amber text-black shadow-4"
                       :offset="[10, 10]"
                       content-style="font-size: 12px"
-                      >{{ $t("index.logout") }}</q-tooltip
+                    >{{ $t('index.logout') }}
+                    </q-tooltip
                     >
                   </q-btn>
                 </div>
@@ -162,7 +170,8 @@
                 content-class="bg-amber text-black shadow-4"
                 :offset="[15, 15]"
                 content-style="font-size: 12px"
-                >{{ $t("index.login_tip") }}</q-tooltip
+              >{{ $t('index.login_tip') }}
+              </q-tooltip
               >
             </q-btn>
           </transition>
@@ -177,7 +186,8 @@
                 content-class="bg-amber text-black shadow-4"
                 :offset="[15, 15]"
                 content-style="font-size: 12px"
-                >{{ $t("index.register_tip") }}</q-tooltip
+              >{{ $t('index.register_tip') }}
+              </q-tooltip
               >
             </q-btn>
           </transition>
@@ -194,7 +204,9 @@
     >
       <q-scroll-area class="fit" style="overflow-y: auto">
         <q-list>
+          <!-- 报表中心，关闭 -->
           <q-item
+            v-if="false"
             clickable
             :to="{ name: 'outbounddashboard' }"
             @click="linkChange('outbounddashboard')"
@@ -205,10 +217,13 @@
               'my-menu-link': link === 'outbounddashboard' && link !== '',
             }"
           >
-            <q-item-section avatar><q-icon name="auto_graph" /></q-item-section>
-            <q-item-section>{{ $t("menuItem.dashboard") }}</q-item-section>
+            <q-item-section avatar>
+              <q-icon name="auto_graph"/>
+            </q-item-section>
+            <q-item-section>{{ $t('menuItem.dashboard') }}</q-item-section>
           </q-item>
-          <q-separator />
+          <q-separator v-if="false"/>
+          <!-- 收货管理 -->
           <q-item
             clickable
             :to="{ name: 'asn' }"
@@ -219,10 +234,13 @@
             :class="{ 'my-menu-link': link === 'inbound' && link !== '' }"
           >
             <q-item-section avatar
-              ><q-icon name="speaker_notes"
-            /></q-item-section>
-            <q-item-section>{{ $t("menuItem.inbound") }}</q-item-section>
+            >
+              <q-icon name="speaker_notes"
+              />
+            </q-item-section>
+            <q-item-section>{{ $t('menuItem.inbound') }}</q-item-section>
           </q-item>
+          <!-- 发货管理 -->
           <q-item
             clickable
             :to="{ name: 'dn' }"
@@ -232,10 +250,14 @@
             :active="link === 'outbound' && link !== ''"
             :class="{ 'my-menu-link': link === 'outbound' && link !== '' }"
           >
-            <q-item-section avatar><q-icon name="rv_hookup" /></q-item-section>
-            <q-item-section>{{ $t("menuItem.outbound") }}</q-item-section>
+            <q-item-section avatar>
+              <q-icon name="rv_hookup"/>
+            </q-item-section>
+            <q-item-section>{{ $t('menuItem.outbound') }}</q-item-section>
           </q-item>
+          <!-- 库存管理，关闭 -->
           <q-item
+            v-if="false"
             clickable
             :to="{ name: 'stocklist' }"
             @click="linkChange('stock')"
@@ -245,12 +267,16 @@
             :class="{ 'my-menu-link': link === 'stock' && link !== '' }"
           >
             <q-item-section avatar
-              ><q-icon name="multiline_chart"
-            /></q-item-section>
-            <q-item-section>{{ $t("menuItem.stock") }}</q-item-section>
+            >
+              <q-icon name="multiline_chart"
+              />
+            </q-item-section>
+            <q-item-section>{{ $t('menuItem.stock') }}</q-item-section>
           </q-item>
-          <q-separator />
+          <q-separator v-if="false"/>
+          <!-- 财务中心，关闭 -->
           <q-item
+            v-if="false"
             clickable
             :to="{ name: 'capitallist' }"
             @click="linkChange('finance')"
@@ -260,10 +286,13 @@
             :class="{ 'my-menu-link': link === 'finance' && link !== '' }"
           >
             <q-item-section avatar
-              ><q-icon name="devices_other"
-            /></q-item-section>
-            <q-item-section>{{ $t("menuItem.finance") }}</q-item-section>
+            >
+              <q-icon name="devices_other"
+              />
+            </q-item-section>
+            <q-item-section>{{ $t('menuItem.finance') }}</q-item-section>
           </q-item>
+          <!-- 商品管理 -->
           <q-item
             clickable
             :to="{ name: 'goodslist' }"
@@ -273,10 +302,14 @@
             :active="link === 'goods' && link !== ''"
             :class="{ 'my-menu-link': link === 'goods' && link !== '' }"
           >
-            <q-item-section avatar><q-icon name="shop_two" /></q-item-section>
-            <q-item-section>{{ $t("menuItem.goods") }}</q-item-section>
+            <q-item-section avatar>
+              <q-icon name="shop_two"/>
+            </q-item-section>
+            <q-item-section>{{ $t('menuItem.goods') }}</q-item-section>
           </q-item>
+          <!-- 基本设置，关闭 -->
           <q-item
+            v-if="false"
             clickable
             :to="{ name: 'company' }"
             @click="linkChange('baseinfo')"
@@ -285,9 +318,12 @@
             :active="link === 'baseinfo' && link !== ''"
             :class="{ 'my-menu-link': link === 'baseinfo' && link !== '' }"
           >
-            <q-item-section avatar><q-icon name="info" /></q-item-section>
-            <q-item-section>{{ $t("menuItem.baseinfo") }}</q-item-section>
+            <q-item-section avatar>
+              <q-icon name="info"/>
+            </q-item-section>
+            <q-item-section>{{ $t('menuItem.baseinfo') }}</q-item-section>
           </q-item>
+          <!-- 仓库设置 -->
           <q-item
             clickable
             :to="{ name: 'warehouseset' }"
@@ -297,11 +333,15 @@
             :active="link === 'warehouse' && link !== ''"
             :class="{ 'my-menu-link': link === 'warehouse' && link !== '' }"
           >
-            <q-item-section avatar><q-icon name="settings" /></q-item-section>
-            <q-item-section>{{ $t("menuItem.warehouse") }}</q-item-section>
+            <q-item-section avatar>
+              <q-icon name="settings"/>
+            </q-item-section>
+            <q-item-section>{{ $t('menuItem.warehouse') }}</q-item-section>
           </q-item>
-          <q-separator />
+          <q-separator v-if="false"/>
+          <!-- 用户管理，关闭 -->
           <q-item
+            v-if="false"
             clickable
             :to="{ name: 'stafflist' }"
             @click="linkChange('staff')"
@@ -311,11 +351,15 @@
             :class="{ 'my-menu-link': link === 'staff' && link !== '' }"
           >
             <q-item-section avatar
-              ><q-icon name="assignment_ind"
-            /></q-item-section>
-            <q-item-section>{{ $t("menuItem.staff") }}</q-item-section>
+            >
+              <q-icon name="assignment_ind"
+              />
+            </q-item-section>
+            <q-item-section>{{ $t('menuItem.staff') }}</q-item-section>
           </q-item>
+          <!-- 司机管理，关闭 -->
           <q-item
+            v-if="false"
             clickable
             :to="{ name: 'driverlist' }"
             @click="linkChange('driver')"
@@ -325,12 +369,16 @@
             :class="{ 'my-menu-link': link === 'driver' && link !== '' }"
           >
             <q-item-section avatar
-              ><q-icon name="transfer_within_a_station"
-            /></q-item-section>
-            <q-item-section>{{ $t("menuItem.driver") }}</q-item-section>
+            >
+              <q-icon name="transfer_within_a_station"
+              />
+            </q-item-section>
+            <q-item-section>{{ $t('menuItem.driver') }}</q-item-section>
           </q-item>
-          <q-separator />
+          <q-separator v-if="false"/>
+          <!-- 上传中心，关闭 -->
           <q-item
+            v-if="false"
             clickable
             :to="{ name: 'initializeupload' }"
             @click="linkChange('uploadcenter')"
@@ -340,11 +388,15 @@
             :class="{ 'my-menu-link': link === 'uploadcenter' && link !== '' }"
           >
             <q-item-section avatar
-              ><q-icon name="file_upload"
-            /></q-item-section>
-            <q-item-section>{{ $t("menuItem.uploadcenter") }}</q-item-section>
+            >
+              <q-icon name="file_upload"
+              />
+            </q-item-section>
+            <q-item-section>{{ $t('menuItem.uploadcenter') }}</q-item-section>
           </q-item>
+          <!-- 下载中心，关闭 -->
           <q-item
+            v-if="false"
             clickable
             :to="{ name: 'downloadinbound' }"
             @click="linkChange('downloadcenter')"
@@ -356,9 +408,11 @@
             }"
           >
             <q-item-section avatar
-              ><q-icon name="file_download"
-            /></q-item-section>
-            <q-item-section>{{ $t("menuItem.downloadcenter") }}</q-item-section>
+            >
+              <q-icon name="file_download"
+              />
+            </q-item-section>
+            <q-item-section>{{ $t('menuItem.downloadcenter') }}</q-item-section>
           </q-item>
         </q-list>
       </q-scroll-area>
@@ -370,7 +424,7 @@
         width: $q.screen.width,
       }"
     >
-      <router-view />
+      <router-view/>
     </q-page-container>
     <q-dialog
       v-model="authid"
@@ -382,19 +436,21 @@
           class="bg-light-blue-10 text-white rounded-borders"
           style="height: 50px"
         >
-          <div>{{ $t("index.your_openid") }}</div>
+          <div>{{ $t('index.your_openid') }}</div>
           <q-space></q-space>
           <q-btn dense flat icon="close" v-close-popup>
             <q-tooltip
               content-class="bg-amber text-black shadow-4"
               :offset="[20, 20]"
               content-style="font-size: 12px"
-              >{{ $t("index.close") }}</q-tooltip
+            >{{ $t('index.close') }}
+            </q-tooltip
             >
           </q-btn>
         </q-bar>
         <q-card-section class="q-pt-md"
-          ><q-input
+        >
+          <q-input
             dense
             outlined
             square
@@ -402,7 +458,8 @@
             v-model="openid"
             readonly
             disable
-        /></q-card-section>
+          />
+        </q-card-section>
       </q-card>
     </q-dialog>
     <q-dialog
@@ -417,31 +474,34 @@
         >
           <q-tabs v-model="activeTab" class="tabs">
             <q-tab name="user" @click="admin = false">
-              {{ $t("index.user_login") }}
+              {{ $t('index.user_login') }}
               <q-tooltip
                 content-class="bg-amber text-black shadow-4"
                 :offset="[5, 5]"
                 content-style="font-size: 12px"
-                >{{ $t("index.user_login") }}</q-tooltip
+              >{{ $t('index.user_login') }}
+              </q-tooltip
               >
             </q-tab>
             <q-tab name="admin" @click="admin = true">
-              {{ $t("index.admin_login") }}
+              {{ $t('index.admin_login') }}
               <q-tooltip
                 content-class="bg-amber text-black shadow-4"
                 :offset="[5, 5]"
                 content-style="font-size: 12px"
-                >{{ $t("index.admin_login") }}</q-tooltip
+              >{{ $t('index.admin_login') }}
+              </q-tooltip
               >
             </q-tab>
           </q-tabs>
-          <q-space />
+          <q-space/>
           <q-btn dense flat icon="close" v-close-popup>
             <q-tooltip
               content-class="bg-amber text-black shadow-4"
               :offset="[20, 20]"
               content-style="font-size: 12px"
-              >{{ $t("index.close") }}</q-tooltip
+            >{{ $t('index.close') }}
+            </q-tooltip
             >
           </q-btn>
         </q-bar>
@@ -510,7 +570,7 @@
           </template>
         </q-card-section>
         <q-card-actions align="left" class="text-primary">
-          <q-space />
+          <q-space/>
           <template>
             <q-btn
               color="primary"
@@ -528,7 +588,7 @@
                 register = true;
               "
             >
-              {{ $t("index.register_tip") }}
+              {{ $t('index.register_tip') }}
             </q-btn>
           </div>
         </q-card-actions>
@@ -544,14 +604,15 @@
           class="bg-light-blue-10 text-white rounded-borders"
           style="height: 50px"
         >
-          <div>{{ $t("index.register_tip") }}</div>
+          <div>{{ $t('index.register_tip') }}</div>
           <q-space></q-space>
           <q-btn dense flat icon="close" v-close-popup>
             <q-tooltip
               content-class="bg-amber text-black shadow-4"
               :offset="[20, 20]"
               content-style="font-size: 12px"
-              >{{ $t("index.close") }}</q-tooltip
+            >{{ $t('index.close') }}
+            </q-tooltip
             >
           </q-btn>
         </q-bar>
@@ -603,12 +664,14 @@
           </q-input>
         </q-card-section>
         <q-card-actions align="right" class="text-primary q-mx-sm"
-          ><q-btn
+        >
+          <q-btn
             class="full-width"
             color="primary"
             :label="$t('index.register')"
             @click="Register()"
-        /></q-card-actions>
+          />
+        </q-card-actions>
         <q-card-actions align="center" style="margin-top: -8px">
           <q-btn
             class="text-teal-4"
@@ -625,8 +688,8 @@
   </q-layout>
 </template>
 <script>
-import { get, getauth, post, baseurl } from 'boot/axios_request'
-import { LocalStorage, SessionStorage, openURL } from 'quasar'
+import { baseurl, get, getauth, post } from 'boot/axios_request'
+import { LocalStorage, openURL, SessionStorage } from 'quasar'
 import Bus from 'boot/bus.js'
 
 export default {
@@ -639,17 +702,50 @@ export default {
       warehouse_name: '',
       warehouseOptions: [],
       langOptions: [
-        { value: 'en-US', label: 'English' },
-        { value: 'zh-hans', label: '中文简体' },
-        { value: 'zh-hant', label: '中文繁體' },
-        { value: 'fr', label: 'Français' },
-        { value: 'pt', label: 'Português' },
-        { value: 'sp', label: 'Español' },
-        { value: 'de', label: 'Deutsch' },
-        { value: 'ru', label: 'русский язык' },
-        { value: 'ar', label: 'Arabic' },
-        { value: 'it', label: 'Italiano' },
-        { value: 'ja', label: '日本語' }
+        {
+          value: 'en-US',
+          label: 'English'
+        },
+        {
+          value: 'zh-hans',
+          label: '中文简体'
+        },
+        {
+          value: 'zh-hant',
+          label: '中文繁體'
+        },
+        {
+          value: 'fr',
+          label: 'Français'
+        },
+        {
+          value: 'pt',
+          label: 'Português'
+        },
+        {
+          value: 'sp',
+          label: 'Español'
+        },
+        {
+          value: 'de',
+          label: 'Deutsch'
+        },
+        {
+          value: 'ru',
+          label: 'русский язык'
+        },
+        {
+          value: 'ar',
+          label: 'Arabic'
+        },
+        {
+          value: 'it',
+          label: 'Italiano'
+        },
+        {
+          value: 'ja',
+          label: '日本語'
+        }
       ],
       title: this.$t('index.webtitle'),
       admin: false,
@@ -727,9 +823,9 @@ export default {
             SessionStorage.set('axios_check', 'false')
             getauth(
               'staff/?staff_name=' +
-                _this.login_name +
-                '&check_code=' +
-                _this.check_code
+              _this.login_name +
+              '&check_code=' +
+              _this.check_code
             )
               .then((res) => {
                 if (res.count === 1) {
@@ -1019,6 +1115,7 @@ export default {
   margin: auto;
   color: #d6d7d7;
 }
+
 .tabs .absolute-bottom {
   bottom: 8px;
 }
