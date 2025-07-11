@@ -8,7 +8,7 @@ services:
     #   dockerfile: Dockerfile
     #   target: front
     container_name: greaterwms_front
-    image: greaterwms/greaterwms:front
+    image: greaterwms:front
     restart: always
     privileged: true
     ports:
@@ -26,7 +26,7 @@ services:
     #   dockerfile: Dockerfile
     #   target: backend
     container_name: greaterwms_backend
-    image: greaterwms/greaterwms:backend
+    image: greaterwms:backend
     restart: always
     privileged: true
     volumes:
