@@ -24,14 +24,14 @@ RUN pip3 install daphne
 RUN chmod +x /GreaterWMS/backend_start.sh
 CMD ["/GreaterWMS/backend_start.sh"]
 
-FROM --platform=linux/amd64 node:14.19.3-buster-slim AS front
+FROM --platform=linux/amd64 node:20.10.0-buster-slim AS front
 COPY ./templates/package.json /GreaterWMS/templates/package.json
 #COPY ./templates/node_modules/ /GreaterWMS/templates/node_modules/
 COPY ./web_start.sh /GreaterWMS/templates/web_start.sh
 ENV port = ${port}
 #ENV NODE_OPTIONS=--openssl-legacy-provider
 RUN cd  /GreaterWMS/templates
-RUN npm install -g npm@6.14.18 --force
+RUN npm install -g npm --force
 #RUN npm config set registry https://registry.npm.taobao.org
 RUN npm install -g yarn --force
 #RUN yarn config set registry https://registry.npm.taobao.org
