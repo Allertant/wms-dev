@@ -293,8 +293,9 @@
             </q-item-section>
             <q-item-section>{{ $t('menuItem.finance') }}</q-item-section>
           </q-item>
-          <!-- 商品管理 -->
+          <!-- 商品管理，关闭 -->
           <q-item
+            v-if="false"
             clickable
             :to="{ name: 'goodslist' }"
             @click="linkChange('goods')"
@@ -324,8 +325,9 @@
             </q-item-section>
             <q-item-section>{{ $t('menuItem.baseinfo') }}</q-item-section>
           </q-item>
-          <!-- 仓库设置 -->
+          <!-- 仓库设置，关闭 -->
           <q-item
+            v-if="false"
             clickable
             :to="{ name: 'warehouseset' }"
             @click="linkChange('warehouse')"
