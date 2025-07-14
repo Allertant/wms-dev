@@ -55,3 +55,19 @@ RUN npm install -g @quasar/cli@v2.2.1 --force
 RUN yarn install
 RUN chmod +x /GreaterWMS/templates/web_start.sh
 ENTRYPOINT ["/GreaterWMS/templates/web_start.sh"]
+
+FROM --platform=linux/amd64 node:14.19.3-buster-slim AS front-3
+COPY ./templates-3/package.json /GreaterWMS/templates/package.json
+#COPY ./templates/node_modules/ /GreaterWMS/templates/node_modules/
+COPY ./web_start-3.sh /GreaterWMS/templates/web_start.sh
+ENV port = ${port}
+#ENV NODE_OPTIONS=--openssl-legacy-provider
+RUN cd  /GreaterWMS/templates
+RUN npm install -g npm@9.7.2 --force
+#RUN npm config set registry https://registry.npm.taobao.org
+RUN npm install -g yarn@1.22.19 --force
+#RUN yarn config set registry https://registry.npm.taobao.org
+RUN npm install -g @quasar/cli@v2.2.1 --force
+RUN yarn install
+RUN chmod +x /GreaterWMS/templates/web_start.sh
+ENTRYPOINT ["/GreaterWMS/templates/web_start.sh"]

@@ -38,6 +38,24 @@ services:
       - ./web_start-2.sh:/GreaterWMS/templates/web_start.sh
     networks:
       - basic
+  front-3:
+    # build:
+    #   context: ./
+    #   dockerfile: Dockerfile
+    #   target: front
+    container_name: greaterwms_front-3
+    image: greaterwms:front-3
+    restart: always
+    privileged: true
+    ports:
+      - '8082:8082'
+    depends_on:
+      - backend
+    volumes:
+      - ./templates-3:/GreaterWMS/templates:rw
+      - ./web_start-3.sh:/GreaterWMS/templates/web_start.sh
+    networks:
+      - basic
   backend:
     # build:
     #   context: ./
