@@ -1,5 +1,7 @@
 #!/bin/bash
 
+docker compose down
+
 chmod +x web_start.sh
 chmod +x web_start-2.sh
 chmod +x web_start-3.sh

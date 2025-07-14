@@ -1,3 +1,5 @@
+docker compose down
+
 docker rmi greaterwms:backend
 docker rmi greaterwms:front
 docker rmi greaterwms:front-2

@@ -15572,3 +15572,1540 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 563, in send
     raise SSLError(e, request=request)
 requests.exceptions.SSLError: HTTPSConnectionPool(host='po.56yhz.com', port=443): Max retries exceeded with url: /asgihandler/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)')))
+Welcome To GreaterWMS
+2025-07-14 18:52:13,604 INFO     Starting server at tcp:port=8008:interface=0.0.0.0
+2025-07-14 18:52:13,605 INFO     HTTP/2 support enabled
+2025-07-14 18:52:13,605 INFO     Configuring endpoint tcp:port=8008:interface=0.0.0.0
+2025-07-14 18:52:13,605 INFO     Listening on TCP address 0.0.0.0:8008
+172.24.0.1:52660 - - [14/Jul/2025:18:52:21] "GET /" 200 953
+172.24.0.1:43978 - - [14/Jul/2025:18:52:21] "GET /warehouse/multiple/?max_page=30" 200 376
+172.24.0.1:43968 - - [14/Jul/2025:18:52:21] "GET /staff/?staff_name=admin" 200 237
+172.24.0.1:43970 - - [14/Jul/2025:18:52:21] "GET /asn/list/?page=1" 200 1235
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connection.py", line 414, in connect
+    self.sock = ssl_wrap_socket(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/usr/local/lib/python3.8/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/usr/local/lib/python3.8/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='po.56yhz.com', port=443): Max retries exceeded with url: /asgihandler/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/local/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.8/site-packages/asgihandler/handler.py", line 6, in fetch_data
+    res = requests.post(url, json=data).json()
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 563, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='po.56yhz.com', port=443): Max retries exceeded with url: /asgihandler/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)')))
+Exception in thread Thread-2:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connection.py", line 414, in connect
+    self.sock = ssl_wrap_socket(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/usr/local/lib/python3.8/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/usr/local/lib/python3.8/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='po.56yhz.com', port=443): Max retries exceeded with url: /asgihandler/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/local/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.8/site-packages/asgihandler/handler.py", line 6, in fetch_data
+    res = requests.post(url, json=data).json()
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 563, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='po.56yhz.com', port=443): Max retries exceeded with url: /asgihandler/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)')))
+172.24.0.1:43970 - - [14/Jul/2025:18:52:24] "GET /dn/list/?page=1" 200 840
+172.24.0.1:43970 - - [14/Jul/2025:18:52:24] "GET /asn/list/?page=1" 200 1235
+172.24.0.1:43970 - - [14/Jul/2025:18:52:25] "GET /dn/list/?page=1" 200 840
+172.24.0.1:43970 - - [14/Jul/2025:18:52:25] "GET /asn/list/?page=1" 200 1235
+172.24.0.1:43970 - - [14/Jul/2025:18:52:25] "GET /dn/list/?page=1" 200 840
+172.24.0.1:43970 - - [14/Jul/2025:18:52:27] "GET /dn/list/?page=1" 200 840
+172.24.0.1:43970 - - [14/Jul/2025:18:52:28] "GET /dn/list/?page=1" 200 840
+172.24.0.1:43970 - - [14/Jul/2025:18:52:28] "GET /dn/list/?page=1" 200 840
+172.24.0.1:43970 - - [14/Jul/2025:18:52:28] "OPTIONS /dn/list/" 200 -
+172.24.0.1:43970 - - [14/Jul/2025:18:52:29] "POST /dn/list/" 200 358
+Exception in thread Thread-5:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connection.py", line 414, in connect
+    self.sock = ssl_wrap_socket(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/usr/local/lib/python3.8/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/usr/local/lib/python3.8/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='po.56yhz.com', port=443): Max retries exceeded with url: /asgihandler/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/local/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.8/site-packages/asgihandler/handler.py", line 6, in fetch_data
+    res = requests.post(url, json=data).json()
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 563, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='po.56yhz.com', port=443): Max retries exceeded with url: /asgihandler/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)')))
+Exception in thread Thread-6:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connection.py", line 414, in connect
+    self.sock = ssl_wrap_socket(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/usr/local/lib/python3.8/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/usr/local/lib/python3.8/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='po.56yhz.com', port=443): Max retries exceeded with url: /asgihandler/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/local/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.8/site-packages/asgihandler/handler.py", line 6, in fetch_data
+    res = requests.post(url, json=data).json()
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 563, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='po.56yhz.com', port=443): Max retries exceeded with url: /asgihandler/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)')))
+Exception in thread Thread-4:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connection.py", line 414, in connect
+    self.sock = ssl_wrap_socket(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/usr/local/lib/python3.8/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/usr/local/lib/python3.8/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='po.56yhz.com', port=443): Max retries exceeded with url: /asgihandler/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/local/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.8/site-packages/asgihandler/handler.py", line 6, in fetch_data
+    res = requests.post(url, json=data).json()
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 563, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='po.56yhz.com', port=443): Max retries exceeded with url: /asgihandler/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)')))
+Exception in thread Thread-3:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+Exception in thread Thread-9:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+        httplib_response = self._make_request(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+httplib_response = self._make_request(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connection.py", line 414, in connect
+    self.sock = ssl_wrap_socket(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    conn.connect()
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connection.py", line 414, in connect
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/lib/python3.8/ssl.py", line 500, in wrap_socket
+    self.sock = ssl_wrap_socket(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    return self.sslsocket_class._create(
+  File "/usr/local/lib/python3.8/ssl.py", line 1040, in _create
+Exception in thread Thread-10:
+Traceback (most recent call last):
+Exception in thread   File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    ssl_sock = _ssl_wrap_socket_impl(
+Thread-11      File "/usr/local/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+self.do_handshake()
+  File "/usr/local/lib/python3.8/ssl.py", line 1309, in do_handshake
+:
+    Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/lib/python3.8/ssl.py", line 500, in wrap_socket
+self._sslobj.do_handshake()        httplib_response = self._make_request(
+httplib_response = self._make_request(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    return self.sslsocket_class._create(  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+
+ssl
+  File "/usr/local/lib/python3.8/ssl.py", line 1040, in _create
+.SSLCertVerificationErrorException in thread Thread-7: :
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+    self._validate_conn(conn)
+[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)    
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+self.do_handshake()
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    Exception in thread Thread-8  File "/usr/local/lib/python3.8/ssl.py", line 1309, in do_handshake
+self._validate_conn(conn)
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 489, in send
+
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    conn.connect()
+        resp = conn.urlopen(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connection.py", line 414, in connect
+self._validate_conn(conn)
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+        self._sslobj.do_handshake()
+ssl.    SSLCertVerificationError    conn.connect(): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)
+conn.connect()
+During handling of the above exception, another exception occurred:
+
+
+    Traceback (most recent call last):
+httplib_response = self._make_request(  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 489, in send
+
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connection.py", line 414, in connect
+self.sock = ssl_wrap_socket(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connection.py", line 414, in connect
+
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    retries = retries.increment(  File "/usr/local/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/retry.py", line 592, in increment
+        raise MaxRetryError(_pool, url, error or ResponseError(cause))
+self.sock = ssl_wrap_socket(    resp = conn.urlopen(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='po.56yhz.com', port=443): Max retries exceeded with url: /asgihandler/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+        ssl_sock = _ssl_wrap_socket_impl(
+    self._validate_conn(conn)    ssl_sock = _ssl_wrap_socket_impl(self.sock = ssl_wrap_socket(
+
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    self.run()    
+ssl_sock = _ssl_wrap_socket_impl(
+  File "/usr/local/lib/python3.8/threading.py", line 870, in run
+      File "/usr/local/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+retries = retries.increment(
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/lib/python3.8/ssl.py", line 500, in wrap_socket
+    conn.connect()    self._target(*self._args, **self._kwargs)  File "/usr/local/lib/python3.8/site-packages/urllib3/util/retry.py", line 592, in increment
+
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)          File "/usr/local/lib/python3.8/site-packages/urllib3/connection.py", line 414, in connect
+
+  File "/usr/local/lib/python3.8/site-packages/asgihandler/handler.py", line 6, in fetch_data
+return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+return self.sslsocket_class._create(
+    self.sock = ssl_wrap_socket(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+  File "/usr/local/lib/python3.8/ssl.py", line 500, in wrap_socket
+
+  File "/usr/local/lib/python3.8/ssl.py", line 500, in wrap_socket
+    res = requests.post(url, json=data).json()
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 115, in post
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))  File "/usr/local/lib/python3.8/ssl.py", line 1040, in _create
+    return self.sslsocket_class._create(
+urllib3.exceptions
+  File "/usr/local/lib/python3.8/ssl.py", line 1040, in _create
+.MaxRetryError:     return request("post", url, data=data, json=json, **kwargs)
+    self.do_handshake()
+HTTPSConnectionPool(host='po.56yhz.com', port=443): Max retries exceeded with url: /asgihandler/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)')))  File "/usr/local/lib/python3.8/ssl.py", line 1309, in do_handshake
+
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    self.do_handshake()
+
+During handling of the above exception, another exception occurred:
+
+    Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+  File "/usr/local/lib/python3.8/ssl.py", line 1309, in do_handshake
+ssl_sock = _ssl_wrap_socket_impl(    return self.sslsocket_class._create(
+  File "/usr/local/lib/python3.8/ssl.py", line 1040, in _create
+    self._sslobj.do_handshake()    self.run()
+
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+ssl
+.SSLCertVerificationError  File "/usr/local/lib/python3.8/threading.py", line 870, in run
+    return session.request(method=method, url=url, **kwargs):         self._target(*self._args, **self._kwargs)    
+[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)self._sslobj.do_handshake()return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 489, in send
+
+ssl.SSLCertVerificationError  File "/usr/local/lib/python3.8/ssl.py", line 500, in wrap_socket
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+
+  File "/usr/local/lib/python3.8/site-packages/asgihandler/handler.py", line 6, in fetch_data
+: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)    self.do_handshake()    resp = self.send(prep, **send_kwargs)
+    
+
+During handling of the above exception, another exception occurred:
+
+resp = conn.urlopen(
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 489, in send
+    return self.sslsocket_class._create(
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 701, in send
+
+  File "/usr/local/lib/python3.8/ssl.py", line 1309, in do_handshake
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+      File "/usr/local/lib/python3.8/ssl.py", line 1040, in _create
+        r = adapter.send(request, **kwargs)
+res = requests.post(url, json=data).json()
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 115, in post
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 563, in send
+    self._sslobj.do_handshake()
+sslretries = retries.increment(.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)    raise SSLError(e, request=request)
+requests.exceptions.
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/retry.py", line 592, in increment
+SSLError    
+: self.do_handshake()
+  File "/usr/local/lib/python3.8/ssl.py", line 1309, in do_handshake
+HTTPSConnectionPool(host='po.56yhz.com', port=443): Max retries exceeded with url: /asgihandler/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)')))
+    resp = conn.urlopen(
+During handling of the above exception, another exception occurred:
+
+    self._sslobj.do_handshake()    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+
+ssl.    return request("post", url, data=data, json=json, **kwargs)SSLCertVerificationError: 
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+urllib3.exceptions.[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+MaxRetryErrorTraceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 489, in send
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 489, in send
+:         resp = conn.urlopen(return session.request(method=method, url=url, **kwargs)HTTPSConnectionPool(host='po.56yhz.com', port=443): Max retries exceeded with url: /asgihandler/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)')))
+
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+  File "/usr/local/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+        self.run()
+      File "/usr/local/lib/python3.8/threading.py", line 870, in run
+    retries = retries.increment(
+    retries = retries.increment(resp = conn.urlopen(resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/retry.py", line 592, in increment
+
+    self._target(*self._args, **self._kwargs)  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 701, in send
+
+  File "/usr/local/lib/python3.8/site-packages/asgihandler/handler.py", line 6, in fetch_data
+            res = requests.post(url, json=data).json()r = adapter.send(request, **kwargs)    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/retry.py", line 592, in increment
+
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 115, in post
+retries = retries.increment(
+      File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 563, in send
+
+raise MaxRetryError(_pool, url, error or ResponseError(cause))
+    return request("post", url, data=data, json=json, **kwargs)urllib3.exceptions
+.  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/retry.py", line 592, in increment
+MaxRetryError    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+: HTTPSConnectionPool(host='po.56yhz.com', port=443): Max retries exceeded with url: /asgihandler/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)')))
+    raise SSLError(e, request=request)
+requests.exceptions
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+.urllib3.exceptions.  File "/usr/local/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+SSLError: HTTPSConnectionPool(host='po.56yhz.com', port=443): Max retries exceeded with url: /asgihandler/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)')))
+MaxRetryError    resp = self.send(prep, **send_kwargs)
+: HTTPSConnectionPool(host='po.56yhz.com', port=443): Max retries exceeded with url: /asgihandler/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)')))
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 701, in send
+
+    self.run()
+During handling of the above exception, another exception occurred:
+
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='po.56yhz.com', port=443): Max retries exceeded with url: /asgihandler/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+
+  File "/usr/local/lib/python3.8/threading.py", line 870, in run
+    r = adapter.send(request, **kwargs)    self.run()
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 563, in send
+
+  File "/usr/local/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.8/site-packages/asgihandler/handler.py", line 6, in fetch_data
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.8/site-packages/asgihandler/handler.py", line 6, in fetch_data
+        self.run()raise SSLError(e, request=request)
+
+  File "/usr/local/lib/python3.8/threading.py", line 870, in run
+requests.exceptions.SSLError: HTTPSConnectionPool(host='po.56yhz.com', port=443): Max retries exceeded with url: /asgihandler/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)')))
+    res = requests.post(url, json=data).json()
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    res = requests.post(url, json=data).json()
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 115, in post
+        self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.8/site-packages/asgihandler/handler.py", line 6, in fetch_data
+resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 701, in send
+    res = requests.post(url, json=data).json()
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+        r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 563, in send
+    return session.request(method=method, url=url, **kwargs)
+resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 701, in send
+        raise SSLError(e, request=request)
+resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 701, in send
+requests.exceptions.SSLError: HTTPSConnectionPool(host='po.56yhz.com', port=443): Max retries exceeded with url: /asgihandler/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)')))
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 563, in send
+        raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='po.56yhz.com', port=443): Max retries exceeded with url: /asgihandler/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)')))
+r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 563, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='po.56yhz.com', port=443): Max retries exceeded with url: /asgihandler/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)')))
+172.24.0.1:43970 - - [14/Jul/2025:18:52:30] "GET /dn/list/?page=1" 200 840
+Exception in thread Thread-12:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connection.py", line 414, in connect
+    self.sock = ssl_wrap_socket(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/usr/local/lib/python3.8/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/usr/local/lib/python3.8/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='po.56yhz.com', port=443): Max retries exceeded with url: /asgihandler/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/local/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.8/site-packages/asgihandler/handler.py", line 6, in fetch_data
+    res = requests.post(url, json=data).json()
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 563, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='po.56yhz.com', port=443): Max retries exceeded with url: /asgihandler/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)')))
+172.24.0.1:58332 - - [14/Jul/2025:18:55:19] "GET /" 200 953
+172.24.0.1:58354 - - [14/Jul/2025:18:55:20] "GET /warehouse/multiple/?max_page=30" 200 376
+Exception in thread Thread-14:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connection.py", line 414, in connect
+    self.sock = ssl_wrap_socket(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/usr/local/lib/python3.8/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/usr/local/lib/python3.8/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='po.56yhz.com', port=443): Max retries exceeded with url: /asgihandler/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/local/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.8/site-packages/asgihandler/handler.py", line 6, in fetch_data
+Exception in thread Thread-13:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    res = requests.post(url, json=data).json()
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 115, in post
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+        return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+conn.connect()
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connection.py", line 414, in connect
+        resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 701, in send
+self.sock = ssl_wrap_socket(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 563, in send
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='po.56yhz.com', port=443): Max retries exceeded with url: /asgihandler/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)')))
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/usr/local/lib/python3.8/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/usr/local/lib/python3.8/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='po.56yhz.com', port=443): Max retries exceeded with url: /asgihandler/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/local/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.8/site-packages/asgihandler/handler.py", line 6, in fetch_data
+    res = requests.post(url, json=data).json()
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 563, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='po.56yhz.com', port=443): Max retries exceeded with url: /asgihandler/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)')))
+172.24.0.1:58342 - - [14/Jul/2025:18:55:21] "GET /staff/?staff_name=admin" 200 237
+172.24.0.1:58350 - - [14/Jul/2025:18:55:21] "GET /dn/list/?page=1" 200 840
+172.24.0.1:36676 - - [14/Jul/2025:18:58:17] "GET /" 200 953
+172.24.0.1:36708 - - [14/Jul/2025:18:58:17] "GET /warehouse/multiple/?max_page=30" 200 376
+172.24.0.1:36696 - - [14/Jul/2025:18:58:17] "GET /dn/list/?page=1" 200 840
+172.24.0.1:36700 - - [14/Jul/2025:18:58:18] "GET /staff/?staff_name=admin" 200 237
+Exception in thread Thread-16:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connection.py", line 414, in connect
+Exception in thread Thread-15:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+      File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connection.py", line 414, in connect
+self.sock = ssl_wrap_socket(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    self.sock = ssl_wrap_socket(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+        ssl_sock = _ssl_wrap_socket_impl(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+ssl_sock = _ssl_wrap_socket_impl(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/usr/local/lib/python3.8/ssl.py", line 1040, in _create
+    return self.sslsocket_class._create(
+  File "/usr/local/lib/python3.8/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/usr/local/lib/python3.8/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 489, in send
+    self.do_handshake()
+  File "/usr/local/lib/python3.8/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/retry.py", line 592, in increment
+        resp = conn.urlopen(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.    retries = retries.increment(MaxRetryError: HTTPSConnectionPool(host='po.56yhz.com', port=443): Max retries exceeded with url: /asgihandler/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/retry.py", line 592, in increment
+    self.run()
+  File "/usr/local/lib/python3.8/threading.py", line 870, in run
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions    .MaxRetryError: HTTPSConnectionPool(host='po.56yhz.com', port=443): Max retries exceeded with url: /asgihandler/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.8/site-packages/asgihandler/handler.py", line 6, in fetch_data
+    res = requests.post(url, json=data).json()
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    self.run()
+  File "/usr/local/lib/python3.8/threading.py", line 870, in run
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+        self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.8/site-packages/asgihandler/handler.py", line 6, in fetch_data
+resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 701, in send
+    res = requests.post(url, json=data).json()
+      File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 115, in post
+r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 563, in send
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 563, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='po.56yhz.com', port=443): Max retries exceeded with url: /asgihandler/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)')))
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='po.56yhz.com', port=443): Max retries exceeded with url: /asgihandler/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)')))
+172.24.0.1:58280 - - [14/Jul/2025:19:19:56] "OPTIONS /staff/?staff_name=admin" 200 -
+172.24.0.1:58304 - - [14/Jul/2025:19:19:56] "OPTIONS /warehouse/multiple/?max_page=30" 200 -
+172.24.0.1:58280 - - [14/Jul/2025:19:19:56] "GET /warehouse/multiple/?max_page=30" 200 376
+172.24.0.1:58296 - - [14/Jul/2025:19:19:56] "GET /dn/list/?page=1" 200 840
+172.24.0.1:58304 - - [14/Jul/2025:19:19:56] "GET /staff/?staff_name=admin" 200 237
+Exception in thread Thread-17:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connection.py", line 414, in connect
+    self.sock = ssl_wrap_socket(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/usr/local/lib/python3.8/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/usr/local/lib/python3.8/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='po.56yhz.com', port=443): Max retries exceeded with url: /asgihandler/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/local/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.8/site-packages/asgihandler/handler.py", line 6, in fetch_data
+    res = requests.post(url, json=data).json()
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 563, in send
+Exception in thread     raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='po.56yhz.com', port=443): Max retries exceeded with url: /asgihandler/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)')))
+Thread-18:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connection.py", line 414, in connect
+    self.sock = ssl_wrap_socket(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/usr/local/lib/python3.8/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/usr/local/lib/python3.8/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='po.56yhz.com', port=443): Max retries exceeded with url: /asgihandler/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/local/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.8/site-packages/asgihandler/handler.py", line 6, in fetch_data
+    res = requests.post(url, json=data).json()
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 563, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='po.56yhz.com', port=443): Max retries exceeded with url: /asgihandler/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)')))
+172.24.0.1:58304 - - [14/Jul/2025:19:19:58] "OPTIONS /warehouse/multiple/?max_page=30" 200 -
+172.24.0.1:58304 - - [14/Jul/2025:19:19:58] "GET /warehouse/multiple/?max_page=30" 200 376
+172.24.0.1:58304 - - [14/Jul/2025:19:20:00] "OPTIONS /warehouse/multiple/?max_page=30" 200 -
+172.24.0.1:58304 - - [14/Jul/2025:19:20:00] "GET /warehouse/multiple/?max_page=30" 200 376
+172.24.0.1:35130 - - [14/Jul/2025:19:25:46] "OPTIONS /warehouse/multiple/?max_page=30" 200 -
+172.24.0.1:35130 - - [14/Jul/2025:19:25:46] "GET /warehouse/multiple/?max_page=30" 200 376
+172.24.0.1:55770 - - [14/Jul/2025:19:25:51] "GET /warehouse/multiple/?max_page=30" 200 376
+172.24.0.1:55770 - - [14/Jul/2025:19:25:52] "GET /warehouse/multiple/?max_page=30" 200 376
+172.24.0.1:55780 - - [14/Jul/2025:19:25:52] "GET /warehouse/multiple/?max_page=30" 200 376
+[2025-07-14 19:26:24][django.request.log_response():241] [WARNING] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+172.24.0.1:33058 - - [14/Jul/2025:19:26:24] "GET /.well-known/appspecific/com.chrome.devtools.json" 404 6979
+172.24.0.1:33058 - - [14/Jul/2025:19:26:27] "GET /" 200 953
+[2025-07-14 19:26:27][django.request.log_response():241] [WARNING] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+172.24.0.1:33058 - - [14/Jul/2025:19:26:27] "GET /.well-known/appspecific/com.chrome.devtools.json" 404 6979
+172.24.0.1:33088 - - [14/Jul/2025:19:26:27] "GET /warehouse/multiple/?max_page=30" 200 376
+172.24.0.1:33086 - - [14/Jul/2025:19:26:27] "GET /dn/list/?page=1" 200 840
+Exception in thread Thread-20:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connection.py", line 414, in connect
+    self.sock = ssl_wrap_socket(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/usr/local/lib/python3.8/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/usr/local/lib/python3.8/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='po.56yhz.com', port=443): Max retries exceeded with url: /asgihandler/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/local/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.8/site-packages/asgihandler/handler.py", line 6, in fetch_data
+    res = requests.post(url, json=data).json()
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 563, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='po.56yhz.com', port=443): Max retries exceeded with url: /asgihandler/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)')))
+172.24.0.1:33072 - - [14/Jul/2025:19:26:27] "GET /staff/?staff_name=admin" 200 237
+Exception in thread Thread-19:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connection.py", line 414, in connect
+    self.sock = ssl_wrap_socket(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/usr/local/lib/python3.8/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/usr/local/lib/python3.8/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='po.56yhz.com', port=443): Max retries exceeded with url: /asgihandler/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/local/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.8/site-packages/asgihandler/handler.py", line 6, in fetch_data
+    res = requests.post(url, json=data).json()
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 563, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='po.56yhz.com', port=443): Max retries exceeded with url: /asgihandler/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)')))
+172.24.0.1:33072 - - [14/Jul/2025:19:27:00] "GET /warehouse/multiple/?max_page=30" 200 376
+172.24.0.1:33072 - - [14/Jul/2025:19:27:01] "GET /warehouse/multiple/?max_page=30" 200 376
+172.24.0.1:33072 - - [14/Jul/2025:19:27:01] "GET /warehouse/multiple/?max_page=30" 200 376
+172.24.0.1:33072 - - [14/Jul/2025:19:27:03] "OPTIONS /warehouse/multiple/?max_page=30" 200 -
+172.24.0.1:33072 - - [14/Jul/2025:19:27:03] "GET /warehouse/multiple/?max_page=30" 200 376
+172.24.0.1:33072 - - [14/Jul/2025:19:27:06] "OPTIONS /warehouse/multiple/?max_page=30" 200 -
+172.24.0.1:33072 - - [14/Jul/2025:19:27:06] "GET /warehouse/multiple/?max_page=30" 200 376
+172.24.0.1:44006 - - [14/Jul/2025:19:27:13] "GET /warehouse/multiple/?max_page=30" 200 376
+172.24.0.1:49548 - - [14/Jul/2025:19:30:10] "GET /warehouse/multiple/?max_page=30" 200 376
+172.24.0.1:49700 - - [14/Jul/2025:19:32:25] "GET /warehouse/multiple/?max_page=30" 200 376
+172.24.0.1:49700 - - [14/Jul/2025:19:32:39] "GET /warehouse/multiple/?max_page=30" 200 376
+Welcome To GreaterWMS
+2025-07-14 19:46:46,397 INFO     Starting server at tcp:port=8008:interface=0.0.0.0
+2025-07-14 19:46:46,397 INFO     HTTP/2 support enabled
+2025-07-14 19:46:46,398 INFO     Configuring endpoint tcp:port=8008:interface=0.0.0.0
+2025-07-14 19:46:46,399 INFO     Listening on TCP address 0.0.0.0:8008
+172.25.0.1:38110 - - [14/Jul/2025:20:19:54] "GET /warehouse/multiple/?max_page=30" 200 376
+172.25.0.1:38114 - - [14/Jul/2025:20:19:56] "GET /warehouse/multiple/?max_page=30" 200 376
+172.25.0.1:38114 - - [14/Jul/2025:20:19:57] "GET /warehouse/multiple/?max_page=30" 200 376
+172.25.0.1:38114 - - [14/Jul/2025:20:19:57] "GET /warehouse/multiple/?max_page=30" 200 376
+172.25.0.1:58196 - - [14/Jul/2025:20:34:02] "GET /warehouse/multiple/?max_page=30" 200 376
+172.25.0.1:58196 - - [14/Jul/2025:20:34:04] "GET /warehouse/multiple/?max_page=30" 200 376
+172.25.0.1:58196 - - [14/Jul/2025:20:34:14] "GET /warehouse/multiple/?max_page=30" 200 376
+172.25.0.1:58196 - - [14/Jul/2025:20:34:20] "GET /warehouse/multiple/?max_page=30" 200 376
+172.25.0.1:58196 - - [14/Jul/2025:20:34:24] "OPTIONS /warehouse/multiple/?max_page=30" 200 -
+172.25.0.1:58196 - - [14/Jul/2025:20:34:24] "GET /warehouse/multiple/?max_page=30" 200 376
+172.25.0.1:52426 - - [14/Jul/2025:20:35:43] "GET /warehouse/multiple/?max_page=30" 200 376
+172.25.0.1:52426 - - [14/Jul/2025:20:35:49] "GET /warehouse/multiple/?max_page=30" 200 376
+172.25.0.1:52426 - - [14/Jul/2025:20:35:52] "GET /warehouse/multiple/?max_page=30" 200 376
+172.25.0.1:33536 - - [14/Jul/2025:20:35:55] "GET /" 200 953
+172.25.0.1:33536 - - [14/Jul/2025:20:35:55] "GET /js/app.56cc27b8.js" 200 269834
+172.25.0.1:52426 - - [14/Jul/2025:20:35:55] "OPTIONS /staff/?staff_name=admin" 200 -
+172.25.0.1:52426 - - [14/Jul/2025:20:35:55] "OPTIONS /dn/list/?page=1" 200 -
+172.25.0.1:33554 - - [14/Jul/2025:20:35:55] "OPTIONS /warehouse/multiple/?max_page=30" 200 -
+172.25.0.1:52426 - - [14/Jul/2025:20:35:55] "GET /warehouse/multiple/?max_page=30" 200 376
+172.25.0.1:33556 - - [14/Jul/2025:20:35:55] "GET /staff/?staff_name=admin" 200 237
+172.25.0.1:33554 - - [14/Jul/2025:20:35:55] "GET /dn/list/?page=1" 200 840
+Exception in thread Thread-2:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connection.py", line 414, in connect
+    self.sock = ssl_wrap_socket(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/usr/local/lib/python3.8/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/usr/local/lib/python3.8/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='po.56yhz.com', port=443): Max retries exceeded with url: /asgihandler/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/local/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.8/site-packages/asgihandler/handler.py", line 6, in fetch_data
+    res = requests.post(url, json=data).json()
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 563, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='po.56yhz.com', port=443): Max retries exceeded with url: /asgihandler/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)')))
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connection.py", line 414, in connect
+    self.sock = ssl_wrap_socket(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/usr/local/lib/python3.8/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/usr/local/lib/python3.8/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='po.56yhz.com', port=443): Max retries exceeded with url: /asgihandler/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/local/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.8/site-packages/asgihandler/handler.py", line 6, in fetch_data
+    res = requests.post(url, json=data).json()
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 563, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='po.56yhz.com', port=443): Max retries exceeded with url: /asgihandler/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)')))
+[2025-07-14 20:35:57][django.request.log_response():241] [WARNING] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+172.25.0.1:33536 - - [14/Jul/2025:20:35:57] "GET /.well-known/appspecific/com.chrome.devtools.json" 404 6979
+172.25.0.1:45216 - - [14/Jul/2025:20:36:05] "GET /" 200 953
+[2025-07-14 20:36:05][django.request.log_response():241] [WARNING] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+172.25.0.1:45216 - - [14/Jul/2025:20:36:05] "GET /.well-known/appspecific/com.chrome.devtools.json" 404 6979
+172.25.0.1:45234 - - [14/Jul/2025:20:36:05] "GET /warehouse/multiple/?max_page=30" 200 376
+172.25.0.1:45254 - - [14/Jul/2025:20:36:05] "GET /dn/list/?page=1" 200 840
+172.25.0.1:45240 - - [14/Jul/2025:20:36:05] "GET /staff/?staff_name=admin" 200 237
+Exception in thread Thread-3:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connection.py", line 414, in connect
+    self.sock = ssl_wrap_socket(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/usr/local/lib/python3.8/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/usr/local/lib/python3.8/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='po.56yhz.com', port=443): Max retries exceeded with url: /asgihandler/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/local/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.8/site-packages/asgihandler/handler.py", line 6, in fetch_data
+    res = requests.post(url, json=data).json()
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 563, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='po.56yhz.com', port=443): Max retries exceeded with url: /asgihandler/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)')))
+Exception in thread Thread-4:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connection.py", line 414, in connect
+    self.sock = ssl_wrap_socket(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/usr/local/lib/python3.8/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/usr/local/lib/python3.8/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='po.56yhz.com', port=443): Max retries exceeded with url: /asgihandler/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/local/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.8/site-packages/asgihandler/handler.py", line 6, in fetch_data
+    res = requests.post(url, json=data).json()
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 563, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='po.56yhz.com', port=443): Max retries exceeded with url: /asgihandler/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1131)')))
+172.25.0.1:39242 - - [14/Jul/2025:20:40:15] "GET /warehouse/multiple/?max_page=30" 200 376
+172.25.0.1:39242 - - [14/Jul/2025:20:40:21] "GET /warehouse/multiple/?max_page=30" 200 376
+172.25.0.1:39242 - - [14/Jul/2025:20:40:30] "OPTIONS /warehouse/multiple/?max_page=30" 200 -
+172.25.0.1:39242 - - [14/Jul/2025:20:40:30] "GET /warehouse/multiple/?max_page=30" 200 376
+172.25.0.1:39242 - - [14/Jul/2025:20:40:37] "OPTIONS /warehouse/multiple/?max_page=30" 200 -
+172.25.0.1:39242 - - [14/Jul/2025:20:40:37] "GET /warehouse/multiple/?max_page=30" 200 376
+172.25.0.1:39242 - - [14/Jul/2025:20:40:46] "OPTIONS /warehouse/multiple/?max_page=30" 200 -
+172.25.0.1:39242 - - [14/Jul/2025:20:40:46] "GET /warehouse/multiple/?max_page=30" 200 376
+172.25.0.1:48036 - - [14/Jul/2025:20:40:50] "GET /" 200 953
+[2025-07-14 20:40:50][django.request.log_response():241] [WARNING] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+172.25.0.1:48036 - - [14/Jul/2025:20:40:50] "GET /.well-known/appspecific/com.chrome.devtools.json" 404 6979
+172.25.0.1:48038 - - [14/Jul/2025:20:40:50] "GET /css/vendor.2ac1ba6a.css" 200 208810
+172.25.0.1:48066 - - [14/Jul/2025:20:40:50] "GET /js/app.56cc27b8.js" 200 269834
+172.25.0.1:48050 - - [14/Jul/2025:20:40:50] "GET /css/app.45730797.css" 200 1376
+172.25.0.1:48062 - - [14/Jul/2025:20:40:51] "GET /js/vendor.2cfdd685.js" 200 2252173
+172.25.0.1:48050 - - [14/Jul/2025:20:40:51] "GET /fonts/KFOmCnqEu92Fr1Mu4mxM.f1e2a767.woff" 200 20344
+172.25.0.1:48050 - - [14/Jul/2025:20:40:51] "GET /statics/baseurl.txt" 200 22
+172.25.0.1:48050 - - [14/Jul/2025:20:40:51] "GET /css/2.01c6672a.css" 200 107
+172.25.0.1:48038 - - [14/Jul/2025:20:40:51] "GET /js/34.cc91ab04.js" 200 52141
+172.25.0.1:48066 - - [14/Jul/2025:20:40:51] "GET /js/74.024f217b.js" 200 2792
+172.25.0.1:48062 - - [14/Jul/2025:20:40:51] "GET /js/2.43e66c36.js" 200 19591
+172.25.0.1:48062 - - [14/Jul/2025:20:40:51] "GET /statics/outbound/dnlist.png" 200 3836
+172.25.0.1:48050 - - [14/Jul/2025:20:40:51] "GET /statics/outbound/backorder.png" 200 5160
+172.25.0.1:48066 - - [14/Jul/2025:20:40:51] "GET /statics/outbound/freshorder.png" 200 2509
+172.25.0.1:48038 - - [14/Jul/2025:20:40:51] "GET /statics/outbound/order.png" 200 5273
+172.25.0.1:48036 - - [14/Jul/2025:20:40:51] "GET /statics/outbound/pickstock.png" 200 3840
+172.25.0.1:48072 - - [14/Jul/2025:20:40:51] "GET /statics/outbound/picked.png" 200 4644
+172.25.0.1:39242 - - [14/Jul/2025:20:40:51] "OPTIONS /warehouse/multiple/?max_page=30" 200 -
+172.25.0.1:48062 - - [14/Jul/2025:20:40:51] "GET /fonts/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.c08197a9.woff2" 200 128264
+172.25.0.1:48066 - - [14/Jul/2025:20:40:51] "GET /fonts/KFOlCnqEu92Fr1MmEU9fBBc-.48af7707.woff" 200 20544
+172.25.0.1:48038 - - [14/Jul/2025:20:40:51] "GET /statics/outbound/orderrelease.png" 200 6268
+172.25.0.1:48072 - - [14/Jul/2025:20:40:51] "GET /statics/outbound/pickinglist.png" 200 12504
+172.25.0.1:48036 - - [14/Jul/2025:20:40:51] "GET /statics/outbound/outbound.png" 200 5681
+172.25.0.1:48050 - - [14/Jul/2025:20:40:51] "GET /fonts/KFOlCnqEu92Fr1MmWUlfBBc-.77ecb942.woff" 200 20408
+172.25.0.1:39242 - - [14/Jul/2025:20:40:51] "GET /warehouse/multiple/?max_page=30" 200 376
+172.25.0.1:48062 - - [14/Jul/2025:20:40:51] "GET /statics/outbound/receiving.png" 200 7402
+172.25.0.1:48062 - - [14/Jul/2025:20:40:51] "GET /statics/icons/logo.png" 200 9411
+Welcome To GreaterWMS
+2025-07-14 20:43:05,693 INFO     Starting server at tcp:port=8008:interface=0.0.0.0
+2025-07-14 20:43:05,693 INFO     HTTP/2 support enabled
+2025-07-14 20:43:05,693 INFO     Configuring endpoint tcp:port=8008:interface=0.0.0.0
+2025-07-14 20:43:05,694 INFO     Listening on TCP address 0.0.0.0:8008
+172.26.0.1:54118 - - [14/Jul/2025:20:43:51] "GET /" 200 953
+[2025-07-14 20:43:51][django.request.log_response():241] [WARNING] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+172.26.0.1:54118 - - [14/Jul/2025:20:43:51] "GET /.well-known/appspecific/com.chrome.devtools.json" 404 6979
+172.26.0.1:42894 - - [14/Jul/2025:20:43:51] "GET /warehouse/multiple/?max_page=30" 200 376
+172.26.0.1:54118 - - [14/Jul/2025:20:44:33] "GET /" 200 953
+[2025-07-14 20:44:33][django.request.log_response():241] [WARNING] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+172.26.0.1:54118 - - [14/Jul/2025:20:44:33] "GET /.well-known/appspecific/com.chrome.devtools.json" 404 6979
+172.26.0.1:42894 - - [14/Jul/2025:20:44:33] "GET /warehouse/multiple/?max_page=30" 200 376
+172.26.0.1:51552 - - [14/Jul/2025:20:47:25] "GET /" 200 953
+[2025-07-14 20:47:25][django.request.log_response():241] [WARNING] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+172.26.0.1:51552 - - [14/Jul/2025:20:47:25] "GET /.well-known/appspecific/com.chrome.devtools.json" 404 6979
+172.26.0.1:51564 - - [14/Jul/2025:20:47:25] "GET /warehouse/multiple/?max_page=30" 200 376
+172.26.0.1:51552 - - [14/Jul/2025:20:47:30] "GET /" 200 953
+[2025-07-14 20:47:30][django.request.log_response():241] [WARNING] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+172.26.0.1:51552 - - [14/Jul/2025:20:47:30] "GET /.well-known/appspecific/com.chrome.devtools.json" 404 6979
+172.26.0.1:51568 - - [14/Jul/2025:20:47:30] "GET /css/app.45730797.css" 200 1376
+172.26.0.1:51576 - - [14/Jul/2025:20:47:30] "GET /js/app.56cc27b8.js" 200 269834
+172.26.0.1:51554 - - [14/Jul/2025:20:47:30] "GET /css/vendor.2ac1ba6a.css" 200 208810
+172.26.0.1:51572 - - [14/Jul/2025:20:47:31] "GET /js/vendor.2cfdd685.js" 200 2252173
+172.26.0.1:51554 - - [14/Jul/2025:20:47:31] "GET /fonts/KFOmCnqEu92Fr1Mu4mxM.f1e2a767.woff" 200 20344
+172.26.0.1:51554 - - [14/Jul/2025:20:47:31] "GET /statics/baseurl.txt" 200 22
+172.26.0.1:51554 - - [14/Jul/2025:20:47:31] "GET /css/2.01c6672a.css" 200 107
+172.26.0.1:51572 - - [14/Jul/2025:20:47:31] "GET /js/2.43e66c36.js" 200 19591
+172.26.0.1:51568 - - [14/Jul/2025:20:47:31] "GET /js/34.cc91ab04.js" 200 52141
+172.26.0.1:51576 - - [14/Jul/2025:20:47:31] "GET /js/74.024f217b.js" 200 2792
+172.26.0.1:59664 - - [14/Jul/2025:20:47:31] "GET /statics/outbound/picked.png" 200 4644
+172.26.0.1:51564 - - [14/Jul/2025:20:47:31] "OPTIONS /warehouse/multiple/?max_page=30" 200 -
+172.26.0.1:51552 - - [14/Jul/2025:20:47:31] "GET /statics/outbound/pickstock.png" 200 3840
+172.26.0.1:51554 - - [14/Jul/2025:20:47:31] "GET /statics/outbound/backorder.png" 200 5160
+172.26.0.1:51572 - - [14/Jul/2025:20:47:31] "GET /statics/outbound/order.png" 200 5273
+172.26.0.1:51576 - - [14/Jul/2025:20:47:32] "GET /statics/outbound/freshorder.png" 200 2509
+172.26.0.1:51568 - - [14/Jul/2025:20:47:32] "GET /statics/outbound/dnlist.png" 200 3836
+172.26.0.1:59664 - - [14/Jul/2025:20:47:32] "GET /fonts/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.c08197a9.woff2" 200 128264
+172.26.0.1:51552 - - [14/Jul/2025:20:47:32] "GET /fonts/KFOlCnqEu92Fr1MmWUlfBBc-.77ecb942.woff" 200 20408
+172.26.0.1:51572 - - [14/Jul/2025:20:47:32] "GET /fonts/KFOlCnqEu92Fr1MmEU9fBBc-.48af7707.woff" 200 20544
+172.26.0.1:51554 - - [14/Jul/2025:20:47:32] "GET /statics/outbound/pickinglist.png" 200 12504
+172.26.0.1:51576 - - [14/Jul/2025:20:47:32] "GET /statics/outbound/orderrelease.png" 200 6268
+172.26.0.1:51568 - - [14/Jul/2025:20:47:32] "GET /statics/outbound/outbound.png" 200 5681
+172.26.0.1:51564 - - [14/Jul/2025:20:47:32] "GET /warehouse/multiple/?max_page=30" 200 376
+172.26.0.1:59664 - - [14/Jul/2025:20:47:32] "GET /statics/outbound/receiving.png" 200 7402
+172.26.0.1:59664 - - [14/Jul/2025:20:47:32] "GET /statics/icons/logo.png" 200 9411
+172.26.0.1:59664 - - [14/Jul/2025:20:47:37] "GET /" 200 953
+[2025-07-14 20:47:37][django.request.log_response():241] [WARNING] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+172.26.0.1:59664 - - [14/Jul/2025:20:47:37] "GET /.well-known/appspecific/com.chrome.devtools.json" 404 6979
+172.26.0.1:51576 - - [14/Jul/2025:20:47:37] "GET /css/app.45730797.css" 200 1376
+172.26.0.1:51572 - - [14/Jul/2025:20:47:37] "GET /js/app.56cc27b8.js" 200 269834
+172.26.0.1:51554 - - [14/Jul/2025:20:47:37] "GET /js/vendor.2cfdd685.js" 200 2252173
+172.26.0.1:51568 - - [14/Jul/2025:20:47:37] "GET /css/vendor.2ac1ba6a.css" 200 208810
+172.26.0.1:51554 - - [14/Jul/2025:20:47:37] "GET /fonts/KFOmCnqEu92Fr1Mu4mxM.f1e2a767.woff" 200 20344
+172.26.0.1:51554 - - [14/Jul/2025:20:47:38] "GET /statics/baseurl.txt" 200 22
+172.26.0.1:51572 - - [14/Jul/2025:20:47:38] "GET /js/74.024f217b.js" 200 2792
+172.26.0.1:51576 - - [14/Jul/2025:20:47:38] "GET /js/34.cc91ab04.js" 200 52141
+172.26.0.1:51554 - - [14/Jul/2025:20:47:38] "GET /css/2.01c6672a.css" 200 107
+172.26.0.1:51568 - - [14/Jul/2025:20:47:38] "GET /js/2.43e66c36.js" 200 19591
+172.26.0.1:51554 - - [14/Jul/2025:20:47:38] "GET /statics/outbound/freshorder.png" 200 2509
+172.26.0.1:51576 - - [14/Jul/2025:20:47:38] "GET /statics/outbound/order.png" 200 5273
+172.26.0.1:51568 - - [14/Jul/2025:20:47:38] "GET /statics/outbound/dnlist.png" 200 3836
+172.26.0.1:51572 - - [14/Jul/2025:20:47:38] "GET /statics/outbound/backorder.png" 200 5160
+172.26.0.1:59664 - - [14/Jul/2025:20:47:38] "GET /statics/outbound/pickstock.png" 200 3840
+172.26.0.1:51552 - - [14/Jul/2025:20:47:38] "GET /statics/outbound/picked.png" 200 4644
+172.26.0.1:51564 - - [14/Jul/2025:20:47:38] "OPTIONS /warehouse/multiple/?max_page=30" 200 -
+172.26.0.1:51554 - - [14/Jul/2025:20:47:38] "GET /fonts/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.c08197a9.woff2" 200 128264
+172.26.0.1:51568 - - [14/Jul/2025:20:47:38] "GET /fonts/KFOlCnqEu92Fr1MmEU9fBBc-.48af7707.woff" 200 20544
+172.26.0.1:51576 - - [14/Jul/2025:20:47:38] "GET /fonts/KFOlCnqEu92Fr1MmWUlfBBc-.77ecb942.woff" 200 20408
+172.26.0.1:59664 - - [14/Jul/2025:20:47:38] "GET /statics/outbound/pickinglist.png" 200 12504
+172.26.0.1:51552 - - [14/Jul/2025:20:47:38] "GET /statics/outbound/outbound.png" 200 5681
+172.26.0.1:51572 - - [14/Jul/2025:20:47:38] "GET /statics/outbound/orderrelease.png" 200 6268
+172.26.0.1:51564 - - [14/Jul/2025:20:47:38] "GET /warehouse/multiple/?max_page=30" 200 376
+172.26.0.1:51554 - - [14/Jul/2025:20:47:38] "GET /statics/outbound/receiving.png" 200 7402
+172.26.0.1:51554 - - [14/Jul/2025:20:47:38] "GET /statics/icons/logo.png" 200 9411
+172.26.0.1:51554 - - [14/Jul/2025:20:47:39] "GET /" 200 953
+[2025-07-14 20:47:39][django.request.log_response():241] [WARNING] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+172.26.0.1:51554 - - [14/Jul/2025:20:47:39] "GET /.well-known/appspecific/com.chrome.devtools.json" 404 6979
+172.26.0.1:51552 - - [14/Jul/2025:20:47:39] "GET /css/vendor.2ac1ba6a.css" 200 208810
+172.26.0.1:51572 - - [14/Jul/2025:20:47:39] "GET /css/app.45730797.css" 200 1376
+172.26.0.1:59664 - - [14/Jul/2025:20:47:40] "GET /js/vendor.2cfdd685.js" 200 2252173
+172.26.0.1:51576 - - [14/Jul/2025:20:47:40] "GET /js/app.56cc27b8.js" 200 269834
+172.26.0.1:59664 - - [14/Jul/2025:20:47:40] "GET /fonts/KFOmCnqEu92Fr1Mu4mxM.f1e2a767.woff" 200 20344
+172.26.0.1:59664 - - [14/Jul/2025:20:47:40] "GET /statics/baseurl.txt" 200 22
+172.26.0.1:51552 - - [14/Jul/2025:20:47:40] "GET /js/34.cc91ab04.js" 200 52141
+172.26.0.1:59664 - - [14/Jul/2025:20:47:40] "GET /css/2.01c6672a.css" 200 107
+172.26.0.1:51572 - - [14/Jul/2025:20:47:40] "GET /js/74.024f217b.js" 200 2792
+172.26.0.1:51576 - - [14/Jul/2025:20:47:40] "GET /js/2.43e66c36.js" 200 19591
+172.26.0.1:51576 - - [14/Jul/2025:20:47:41] "GET /statics/outbound/dnlist.png" 200 3836
+172.26.0.1:51552 - - [14/Jul/2025:20:47:41] "GET /statics/outbound/backorder.png" 200 5160
+172.26.0.1:51568 - - [14/Jul/2025:20:47:41] "GET /statics/outbound/picked.png" 200 4644
+172.26.0.1:51554 - - [14/Jul/2025:20:47:41] "GET /statics/outbound/pickstock.png" 200 3840
+172.26.0.1:59664 - - [14/Jul/2025:20:47:41] "GET /statics/outbound/order.png" 200 5273
+172.26.0.1:51572 - - [14/Jul/2025:20:47:41] "GET /statics/outbound/freshorder.png" 200 2509
+172.26.0.1:51564 - - [14/Jul/2025:20:47:41] "OPTIONS /warehouse/multiple/?max_page=30" 200 -
+172.26.0.1:51576 - - [14/Jul/2025:20:47:41] "GET /fonts/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.c08197a9.woff2" 200 128264
+172.26.0.1:51552 - - [14/Jul/2025:20:47:41] "GET /fonts/KFOlCnqEu92Fr1MmWUlfBBc-.77ecb942.woff" 200 20408
+172.26.0.1:51568 - - [14/Jul/2025:20:47:41] "GET /fonts/KFOlCnqEu92Fr1MmEU9fBBc-.48af7707.woff" 200 20544
+172.26.0.1:59664 - - [14/Jul/2025:20:47:41] "GET /statics/outbound/pickinglist.png" 200 12504
+172.26.0.1:51572 - - [14/Jul/2025:20:47:41] "GET /statics/outbound/outbound.png" 200 5681
+172.26.0.1:51554 - - [14/Jul/2025:20:47:41] "GET /statics/outbound/orderrelease.png" 200 6268
+172.26.0.1:51576 - - [14/Jul/2025:20:47:41] "GET /statics/outbound/receiving.png" 200 7402
+172.26.0.1:51564 - - [14/Jul/2025:20:47:41] "GET /warehouse/multiple/?max_page=30" 200 376
+172.26.0.1:51576 - - [14/Jul/2025:20:47:41] "GET /statics/icons/logo.png" 200 9411
+172.26.0.1:51576 - - [14/Jul/2025:20:47:42] "GET /" 200 953
+[2025-07-14 20:47:42][django.request.log_response():241] [WARNING] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+172.26.0.1:51576 - - [14/Jul/2025:20:47:42] "GET /.well-known/appspecific/com.chrome.devtools.json" 404 6979
+172.26.0.1:59664 - - [14/Jul/2025:20:47:42] "GET /js/vendor.2cfdd685.js" 200 2252173
+172.26.0.1:51554 - - [14/Jul/2025:20:47:42] "GET /css/vendor.2ac1ba6a.css" 200 208810
+172.26.0.1:51568 - - [14/Jul/2025:20:47:42] "GET /js/app.56cc27b8.js" 200 269834
+172.26.0.1:51572 - - [14/Jul/2025:20:47:42] "GET /css/app.45730797.css" 200 1376
+172.26.0.1:51572 - - [14/Jul/2025:20:47:42] "GET /fonts/KFOmCnqEu92Fr1Mu4mxM.f1e2a767.woff" 200 20344
+172.26.0.1:51572 - - [14/Jul/2025:20:47:43] "GET /statics/baseurl.txt" 200 22
+172.26.0.1:51572 - - [14/Jul/2025:20:47:43] "GET /css/2.01c6672a.css" 200 107
+172.26.0.1:59664 - - [14/Jul/2025:20:47:43] "GET /js/2.43e66c36.js" 200 19591
+172.26.0.1:51568 - - [14/Jul/2025:20:47:43] "GET /js/74.024f217b.js" 200 2792
+172.26.0.1:51554 - - [14/Jul/2025:20:47:43] "GET /js/34.cc91ab04.js" 200 52141
+172.26.0.1:51568 - - [14/Jul/2025:20:47:43] "GET /statics/outbound/freshorder.png" 200 2509
+172.26.0.1:51554 - - [14/Jul/2025:20:47:43] "GET /statics/outbound/dnlist.png" 200 3836
+172.26.0.1:51576 - - [14/Jul/2025:20:47:43] "GET /statics/outbound/pickstock.png" 200 3840
+172.26.0.1:51572 - - [14/Jul/2025:20:47:43] "GET /statics/outbound/backorder.png" 200 5160
+172.26.0.1:51552 - - [14/Jul/2025:20:47:43] "GET /statics/outbound/picked.png" 200 4644
+172.26.0.1:59664 - - [14/Jul/2025:20:47:43] "GET /statics/outbound/order.png" 200 5273
+172.26.0.1:51564 - - [14/Jul/2025:20:47:43] "OPTIONS /warehouse/multiple/?max_page=30" 200 -
+172.26.0.1:51568 - - [14/Jul/2025:20:47:43] "GET /fonts/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.c08197a9.woff2" 200 128264
+172.26.0.1:51554 - - [14/Jul/2025:20:47:43] "GET /fonts/KFOlCnqEu92Fr1MmWUlfBBc-.77ecb942.woff" 200 20408
+172.26.0.1:51572 - - [14/Jul/2025:20:47:43] "GET /statics/outbound/orderrelease.png" 200 6268
+172.26.0.1:59664 - - [14/Jul/2025:20:47:43] "GET /statics/outbound/pickinglist.png" 200 12504
+172.26.0.1:51552 - - [14/Jul/2025:20:47:43] "GET /statics/outbound/outbound.png" 200 5681
+172.26.0.1:51576 - - [14/Jul/2025:20:47:43] "GET /fonts/KFOlCnqEu92Fr1MmEU9fBBc-.48af7707.woff" 200 20544
+172.26.0.1:51554 - - [14/Jul/2025:20:47:43] "GET /statics/outbound/receiving.png" 200 7402
+172.26.0.1:51564 - - [14/Jul/2025:20:47:43] "GET /warehouse/multiple/?max_page=30" 200 376
+172.26.0.1:51554 - - [14/Jul/2025:20:47:43] "GET /statics/icons/logo.png" 200 9411
