@@ -23,7 +23,7 @@
           </q-toolbar-title>
         </transition>
         <q-space/>
-        <transition appear enter-active-class="animated zoomIn">
+        <transition v-if="false" appear enter-active-class="animated zoomIn">
           <q-btn
             square
             dense
@@ -48,7 +48,8 @@
             </q-menu>
           </q-btn>
         </transition>
-        <transition appear enter-active-class="animated zoomIn">
+        <!-- 更改语言 -->
+        <transition v-if="false" appear enter-active-class="animated zoomIn">
           <q-btn
             round
             dense

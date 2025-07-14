@@ -2,8 +2,8 @@
 // so you can safely delete all default props below
 
 export default {
-  failed: 'Action failed',
-  success: 'Action was successful',
+  failed: '操作失败',
+  success: '操作成功',
   index: {
     operation: '操作手册',
     app_store: '商用授权',
@@ -12,10 +12,10 @@ export default {
     slogan: '宣传语',
     server: '请求地址',
     index_title: '仓库管理平台',
-    webtitle: 'GreaterWMS--开源仓库管理系统',
+    webtitle: '阿拉山口综保区金港开发有限公司多式联运物流仓储系统',
     home: '首页',
-    title: 'GreaterWMS',
-    title_tip: 'GreaterWMS首页',
+    title: '物流仓储系统',
+    title_tip: '系统首页',
     hide_menu: '收起菜单',
     api: 'API文档',
     translate: '更改语言',
