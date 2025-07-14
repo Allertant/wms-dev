@@ -1,5 +1,5 @@
 #!/bin/bash
-cd /GreaterWMS/templates-2
+cd /GreaterWMS/templates
 yarn install --force
 quasar build
 quasar d
