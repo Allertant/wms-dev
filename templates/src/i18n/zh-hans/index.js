@@ -14,7 +14,7 @@ export default {
     index_title: '仓库管理平台',
     webtitle: '阿拉山口综保区金港开发有限公司多式联运物流仓储系统',
     home: '首页',
-    title: '物流仓储系统',
+    title: '货物管理系统',
     title_tip: '系统首页',
     hide_menu: '收起菜单',
     api: 'API文档',
